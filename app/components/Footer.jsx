@@ -1,14 +1,11 @@
 export const Footer = () => {
   return (
-    <footer className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-slate-900 text-white">
+    <footer className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-slate-900 text-white mt-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center space-x-2 sm:space-x-3 mb-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center">
-                <span className="font-black text-lg sm:text-xl">P</span>
-              </div>
-              <span className="text-xl sm:text-2xl font-black">PayConnect</span>
+             <img src="" alt="" srcset="" />
             </div>
             <p className="text-slate-400 text-sm sm:text-base">
               Simplifying bill payments across Africa

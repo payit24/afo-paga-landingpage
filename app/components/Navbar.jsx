@@ -134,7 +134,7 @@ export default function Navbar() {
         scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-lg'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="mx-auto sm:px-2 lg:px-6">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
@@ -344,22 +344,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-
-      <style>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.2s ease-out;
-        }
-      `}</style>
     </nav>
   );
 }

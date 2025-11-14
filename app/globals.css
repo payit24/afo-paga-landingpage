@@ -22,7 +22,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins), sans-serif;
+ font-family: var(--font-etna), serif;
 }
 
 /* Tailwind theme override (optional) */
@@ -32,3 +32,68 @@ h1, h2, h3, h4, h5, h6 {
   --font-sans: var(--font-lora);
   --font-heading: var(--font-poppins);
 }
+
+ @keyframes fade-in {
+   from {
+     opacity: 0;
+     transform: translateY(-10px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ .animate-fade-in {
+   animation: fade-in 0.2s ease-out;
+ }
+
+     @keyframes blob {
+  
+       0%,
+       100% {
+         transform: translate(0, 0) scale(1);
+       }
+  
+       33% {
+         transform: translate(30px, -50px) scale(1.1);
+       }
+  
+       66% {
+         transform: translate(-20px, 20px) scale(0.9);
+       }
+     }
+  
+     @keyframes float {
+  
+       0%,
+       100% {
+         transform: translateY(0px);
+       }
+  
+       50% {
+         transform: translateY(-20px);
+       }
+     }
+  
+     .animate-blob {
+       animation: blob 7s infinite;
+     }
+  
+     .animation-delay-2000 {
+       animation-delay: 2s;
+     }
+  
+     .animation-delay-4000 {
+       animation-delay: 4s;
+     }
+  
+     .animate-float {
+       animation: float 3s ease-in-out infinite;
+     }
+  
+     .animate-float-delayed {
+       animation: float 3s ease-in-out infinite;
+       animation-delay: 1.5s;
+     }
