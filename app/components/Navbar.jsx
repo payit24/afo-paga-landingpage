@@ -277,7 +277,7 @@ export default function Navbar() {
             </a>
 
             {/* CTA Button */}
-            <button className="ml-4 px-6 py-2.5 bg-gradient-to-r from-emerald-500 via-emerald-600 to-blue-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-emerald-500/50 hover:scale-105 transition-all duration-300">
+            <button className="ml-4 px-6 py-2.5 bg-[#32d4bc] text-white rounded-full font-semibold hover:shadow-lg hover:shadow-emerald-500/50 hover:scale-105 transition-all duration-300">
               Download App
             </button>
           </div>
@@ -338,7 +338,7 @@ export default function Navbar() {
             <a href="#about" className="block px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 rounded-lg transition-colors">
               About Us
             </a>
-            <button className="w-full mt-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-600 text-white rounded-full font-semibold shadow-lg">
+            <button className="w-full mt-2 px-6 py-3 bg-[#003766] text-white rounded-full font-semibold shadow-lg">
               Download App
             </button>
           </div>

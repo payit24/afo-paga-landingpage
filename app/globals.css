@@ -22,15 +22,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
- font-family: var(--font-etna), serif;
+ font-family: var(--font-lora), serif;
 }
 
 /* Tailwind theme override (optional) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-lora);
-  --font-heading: var(--font-poppins);
+  --font-serif: var(--font-etna);
 }
 
  @keyframes fade-in {

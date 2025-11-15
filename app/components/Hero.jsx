@@ -52,10 +52,10 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 lg:gap-16 items-end pt-16 lg:pt-0 lg:items-center ">
           {/* Left Content - Staggered animations */}
           <motion.div 
-            className="space-y-6 sm:space-y-8"
+            className="space-y-6 sm:space-y-8 pt-16"
             {...animations.staggerContainer}
           >
             {/* Trust Badge */}
@@ -137,7 +137,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 pt-2"
             >
               <motion.button 
-                className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-emerald-500 via-emerald-600 to-blue-600 text-white rounded-full font-bold text-base sm:text-lg shadow-xl flex items-center justify-center space-x-2 overflow-hidden"
+                className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-[ bg-[#32d4bc] text-white rounded-full font-bold text-base sm:text-lg shadow-xl flex items-center justify-center space-x-2 overflow-hidden"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 25px 50px -12px rgba(16, 185, 129, 0.5)"
@@ -146,7 +146,7 @@ export default function Hero() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-emerald-500"
+                  className="absolute inset-0  bg-[#32d4bc]"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
@@ -187,7 +187,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="relative flex items-center justify-center lg:h-[800px] mt-8 lg:mt-0">
+          <div className="relative flex items-center justify-center lg:h-auto mt-8 lg:mt-0">
             {/* Floating card 1 */}
             <motion.div 
               {...animations.scaleIn}
@@ -236,7 +236,7 @@ export default function Hero() {
             <motion.div 
               {...animations.slideUpBounce}
               transition={{ ...animations.slideUpBounce.transition, delay: 0.3 }}
-              className="relative z-10 transform scale-110  lg:scale-140"
+              className="relative z-10 transform scale-110  lg:scale-130"
             >
               <img 
                 src="/images/mockup.png"

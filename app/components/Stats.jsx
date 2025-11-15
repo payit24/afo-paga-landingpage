@@ -42,9 +42,9 @@ export default function Stats() {
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
       {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#32d4bc] via-[#2ac0aa] to-[#1fa896]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#003766] via-[#003766] to-[#002444]">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 -left-4 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-[#003766]] rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
           <div className="absolute top-0 -right-4 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
@@ -113,18 +113,6 @@ export default function Stats() {
             <p className="text-xl text-white/90 leading-relaxed">
               Join a thriving community of satisfied customers who have transformed their business with our innovative solutions.
             </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="group relative bg-white text-[#32d4bc] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl">
-                <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white to-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
-              
-              <button className="group px-8 py-4 rounded-full font-bold text-lg border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:border-white/50">
-                View Case Studies
-              </button>
-            </div>
           </div>
         </div>
       </div>
