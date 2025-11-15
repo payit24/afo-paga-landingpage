@@ -35,7 +35,7 @@ export const Footer = () => {
         {/* Newsletter Section */}
         <motion.div 
           {...fadeInUp}
-          className="relative z-10 -mt-10 px-4 sm:px-6 lg:px-12"
+          className="relative transform -translate-y-12 px-4 sm:px-6 lg:px-12"
         >
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-emerald-500 via-emerald-600 to-blue-600 rounded-3xl p-8 sm:p-12 shadow-2xl">

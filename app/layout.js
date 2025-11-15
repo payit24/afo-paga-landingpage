@@ -15,13 +15,19 @@ const etna = localFont({
       weight: '400',
       style: 'normal',
     }
-    // {
-    //   path: '../public/fonts/Etna-Bold.woff2',
-    //   weight: '700',
-    //   style: 'normal',
-    // },
   ],
   variable: '--font-etna',
+})
+
+const grok = localFont({
+  src: [
+    {
+      path: '../public/fonts/host.ttf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-grok',
 })
 
 export const metadata = {
@@ -33,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${lora.variable} ${etna.variable} antialiased`}
+        className={`${lora.variable} ${grok.variable} antialiased`}
       >
         {children}
       </body>

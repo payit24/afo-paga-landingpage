@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 import  Navbar  from "./components/Navbar";
 import  Hero  from "./components/Hero";
 import  Stats  from "./components/Stats";
+import  {Solution}  from "./components/Solution";
 import  {Footer}  from "./components/Footer";
+import { Steps } from "./components/Steps";
 
 export default function PayConnectLanding() {
   const faqs = [
@@ -18,6 +20,8 @@ export default function PayConnectLanding() {
       <Navbar />
       <Hero />
       <Stats />
+      <Solution />
+      <Steps />
       <Footer />
     </div>
   );
