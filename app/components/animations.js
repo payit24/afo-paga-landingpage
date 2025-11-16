@@ -1,6 +1,7 @@
-// Animation library
+import React, { useEffect, useRef, useState } from 'react';
 
-  const animations = {
+// Animation configurations (same as before)
+export const animations = {
   fadeInLeft: {
     initial: { opacity: 0, x: -60 },
     animate: { opacity: 1, x: 0 },
@@ -14,9 +15,9 @@
   },
 
   fadeInUp: {
-    initial: { opacity: 0, y: 30 },
+    initial: { opacity: 0, y: 40 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }
+    transition: { duration: 1, ease: [0.6, 0.05, 0.01, 0.9] }
   },
   
   slideUpBounce: {
@@ -24,8 +25,7 @@
     animate: { opacity: 1, y: 0, scale: 1 },
     transition: { 
       duration: 1.2, 
-      ease: [0.34, 1.56, 0.64, 1],
-      y: { type: "spring", damping: 15, stiffness: 150 }
+      ease: [0.34, 1.56, 0.64, 1]
     }
   },
   
@@ -92,4 +92,12 @@ export const withDelay = (animation, delay) => ({
   transition: { ...animation.transition, delay }
 });
 
-export default animations;
+
+// Helper function to convert ease arrays to CSS timing functions
+ export const easeToCss = (ease) => {
+  if (Array.isArray(ease)) {
+    return `cubic-bezier(${ease.join(',')})`;
+  }
+  return ease || 'ease';
+};
+

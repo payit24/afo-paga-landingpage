@@ -4,7 +4,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import animations from './animations';
+import {animations} from './animations';
 import { withDelay } from './animations';
 import {featuresData} from './constants';
 
@@ -49,7 +49,7 @@ export default function FeaturesHighlight() {
           className="text-center mb-16 sm:mb-20"
         >
           <motion.div
-            {...withDelay(animations.fadeInUp, 0)}
+            {...withDelay(animations.fadeInUp, 2)}
             className="inline-flex items-center space-x-2 px-4 sm:px-5 py-2.5 mb-6 bg-gradient-to-r from-blue-50 to-emerald-50 border border-blue-200/50 rounded-full shadow-sm"
           >
             <Sparkles className="w-4 h-4 text-emerald-600" />

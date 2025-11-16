@@ -1,6 +1,7 @@
 import { Menu, X, ArrowRight, Star, ChevronRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import animations  from "./animations";
+import {ScrollAnimate} from './ScrollAnimate';
+import {animations} from './animations';
 import { withDelay } from "./animations";
 
 export default function Hero() {
@@ -54,13 +55,14 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 lg:gap-16 items-end pt-16 lg:pt-0 lg:items-center ">
           {/* Left Content - Staggered animations */}
-          <motion.div 
+          < ScrollAnimate
             className="space-y-6 sm:space-y-8 pt-16"
-            {...animations.staggerContainer}
+             animation={animations.fadeInLeft} 
+             triggerOnce={false} threshold={0.5}
           >
             {/* Trust Badge */}
-            <motion.div 
-              {...withDelay(animations.fadeInLeft, 0)}
+            <motion.div animation={animations.fadeInLeft}
+
               className="inline-flex items-center space-x-2 px-4 sm:px-5 py-2.5 bg-gradient-to-r from-blue-50 to-emerald-50 border border-blue-200/50 rounded-full shadow-sm"
             >
               <Sparkles className="w-4 h-4 text-emerald-600" />
@@ -184,53 +186,10 @@ export default function Hero() {
                 </div>
               </motion.div>
             </motion.div>
-          </motion.div>
+          </ScrollAnimate>
 
           {/* Right Content - Phone Mockup */}
           <div className="relative flex items-center justify-center lg:h-auto mt-8 lg:mt-0">
-            {/* Floating card 1 */}
-            <motion.div 
-              {...animations.scaleIn}
-              {...animations.float}
-              transition={{ 
-                ...animations.scaleIn.transition,
-                delay: 0.8,
-                ...animations.float.transition
-              }}
-              className="absolute top-10 -left-8 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 hidden lg:block z-20"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-md">
-                  <CheckCircle2 className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-base font-bold text-slate-900">Bill Paid!</p>
-                  <p className="text-sm text-slate-600">Electricity - ₦5,000</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Floating card 2 */}
-            <motion.div 
-              {...animations.scaleIn}
-              {...animations.floatDelayed}
-              transition={{ 
-                ...animations.scaleIn.transition,
-                delay: 1,
-                ...animations.floatDelayed.transition
-              }}
-              className="absolute bottom-24 -right-8 bg-white/95 backdrop-blur-xl p-5 rounded-2xl shadow-2xl border border-slate-200 hidden lg:block z-20"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-lg">
-                  <Star className="w-6 h-6 text-white fill-white" />
-                </div>
-                <div>
-                  <p className="text-base font-bold text-slate-900">₦2,500 saved</p>
-                  <p className="text-sm text-slate-700">this month</p>
-                </div>
-              </div>
-            </motion.div>
 
             {/* Phone mockup - SLIDES UP */}
             <motion.div 

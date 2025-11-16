@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, Users, Award, Zap } from 'lucide-react';
+import {ScrollAnimate} from './ScrollAnimate';
+import {animations} from './animations';
+import { withDelay } from "./animations";
 
 const statsData = [
   { icon: Users, value: "50+", label: "Active Users" },
@@ -94,7 +97,7 @@ export default function Stats() {
           </div>
           
           {/* Right side - Content */}
-          <div className="lg:col-span-2 text-white space-y-6" style={{ animation: 'fadeInRight 0.8s ease-out' }}>
+          <ScrollAnimate className="lg:col-span-2 text-white space-y-6" animation={animations.fadeInRight} triggerOnce={false} threshold={0.5}>
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -113,7 +116,7 @@ export default function Stats() {
             <p className="text-xl text-white/90 leading-relaxed">
               Join a thriving community of satisfied customers who have transformed their business with our innovative solutions.
             </p>
-          </div>
+          </ScrollAnimate>
         </div>
       </div>
       

@@ -1,29 +1,10 @@
 import React from "react";
 import { Globe, MapPin, CheckCircle2, Clock, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { ScrollAnimate } from "./ScrollAnimate";
+import { animations } from "./animations";
+import { withDelay } from "./animations";
 
-const animations = {
-  fadeInUp: {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] },
-  },
-
-  staggerContainer: {
-    initial: {},
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1,
-      },
-    },
-  },
-};
-
-const withDelay = (animation, delay) => ({
-  ...animation,
-  transition: { ...animation.transition, delay },
-});
 
 const activeCountries = [
   {
@@ -63,8 +44,10 @@ export default function CountryCoverage() {
     <section className="relative py-20 sm:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
-        <motion.div
-          {...animations.staggerContainer}
+        <ScrollAnimate
+          animation={animations.fadeInUp}
+          triggerOnce={false} threshold={0.5
+          }
           className="text-center mb-16 sm:mb-20"
         >
           <motion.div
@@ -81,11 +64,11 @@ export default function CountryCoverage() {
             {...withDelay(animations.fadeInUp, 0.1)}
             className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6"
           >
-            <span className="text-slate-900">Everything You Need to</span>
+            <span className="text-slate-900">Empowering Growth and </span>
             <br />
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-blue-600 via-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-               Country Coverage
+                Innovation Worldwide
               </span>
             </span>
           </motion.h2>
@@ -96,7 +79,7 @@ export default function CountryCoverage() {
           >
          Pay bills seamlessly across multiple African countries with support for all major service providers.
           </motion.p>
-        </motion.div>
+        </ScrollAnimate>
 
         {/* Moving Cards Container */}
         <div className="relative mb-20">

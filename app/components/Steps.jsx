@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import animations from "./animations";
+import {animations} from "./animations";
 import { solutionData } from "./constants";
 import { withDelay } from "./animations";
 import MultiStepScroll from "./multiStepComponent";
