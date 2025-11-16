@@ -24,7 +24,7 @@ export default function MultiStepScroll() {
       title: "Download & Set Up",
       subtitle: "Get the app and link your mobile money in 2 minutes",
       images: [
-        "https://images.unsplash.com/photo-1617585583199-cf4c7ac05ef8?w=1200&fit=crop",
+        "https://images.unsplash.com/photo-1588058365548-9efe5acb8077?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       ],
     },
     {
@@ -42,7 +42,6 @@ export default function MultiStepScroll() {
       subtitle: "Set auto-pay and never miss a payment again",
       images: [
         "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&fit=crop",
-        "https://images.unsplash.com/photo-1556741533-f6acd647d2fb?w=1200&fit=crop",
       ],
     },
     {
@@ -50,8 +49,8 @@ export default function MultiStepScroll() {
       title: "Earn Rewards",
       subtitle: "Get cash-back and points for every bill you pay",
       images: [
-        "https://images.unsplash.com/photo-1523287562758-66c7fc58967a?w=1200&fit=crop",
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&fit=crop",
+        "https://img.freepik.com/free-photo/image-happy-surprised-african-american-girl-receiving-gift-looking-inside-shopping-bad-with-amazement-standing-yellow-background_1258-54846.jpg",
+
       ],
     },
     {
@@ -60,7 +59,7 @@ export default function MultiStepScroll() {
       subtitle: "See all receipts and spending insights instantly",
       images: [
         "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200&fit=crop",
-        "https://images.unsplash.com/photo-1542744095-291d1f67b221?w=1200&fit=crop",
+
       ],
     },
   ]).current;
