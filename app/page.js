@@ -6,6 +6,8 @@ import  Stats  from "./components/Stats";
 import  {Solution}  from "./components/Solution";
 import  {Footer}  from "./components/Footer";
 import { Steps } from "./components/Steps";
+import FeaturesHighlight from "./components/FeatureHiglight";
+import CountryCoverage from "./components/CountryCoverage";
 
 export default function PayConnectLanding() {
   const faqs = [
@@ -22,6 +24,8 @@ export default function PayConnectLanding() {
       <Stats />
       <Solution />
       <Steps />
+      <FeaturesHighlight />
+      <CountryCoverage />
       <Footer />
     </div>
   );

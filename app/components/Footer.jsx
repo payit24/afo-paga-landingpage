@@ -114,29 +114,33 @@ export const Footer = () => {
               {/* Links Columns */}
               {[
                 {
+                  id: 1,
                   title: "Product",
                   links: ["Features", "How It Works", "Security", "Pricing", "Download", "API"],
                 },
                 {
+                  id: 2,
                   title: "Company",
                   links: ["About Us", "Careers", "Blog", "Press Kit", "Partners"],
                 },
                 {
+                  id: 3,
                   title: "Resources",
                   links: ["Help Center", "Contact", "FAQ", "Status", "Community"],
                 },
                 {
+                  id: 4,
                   title: "Legal",
                   links: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Compliance"],
                 }
-              ].map((col, index) => (
-                <motion.div {...fadeInUp} key={index} className="lg:col-span-2">
-                  <h4 className="font-bold mb-4 sm:mb-6 text-white text-base sm:text-lg">
+              ].map((col, idx) => (
+                <motion.div {...fadeInUp} key={col.id} className="lg:col-span-2">
+                  <h4 key={col.id} className="font-bold mb-4 sm:mb-6 text-white text-base sm:text-lg">
                     {col.title}
                   </h4>
-                  <ul className="space-y-3">
-                    {col.links.map((link, j) => (
-                      <li key={j}>
+                  <ul key={col.title} className="space-y-3">
+                    {col.links.map((link, linkIdx) => (
+                      <li key={`${col.title}-${linkIdx}`}>
                         <a
                           href="#"
                           className="text-slate-400 hover:text-emerald-400 transition-colors text-sm sm:text-base inline-flex items-center group"
